@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  telegram_autoforwarder:
+    build: .
+    restart: unless-stopped
+    environment:
+      - API_KEY
+      - OWNER_ID
+      - FROM_CHATS
+      - TO_CHATS
+      - WORKERS
+      - ENV
